@@ -1,0 +1,13 @@
+﻿--New Table
+
+CREATE TABLE [tblCustomer]
+(
+[cID] INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+[Name] VARCHAR (50) NOT NULL,
+[email] VARCHAR (50) NOT NULL,
+[phone] VARCHAR (13) NOT NULL,
+[uId] INT NULL,
+FOREIGN KEY ([uID]) REFERENCES [tblUser]([Id])
+ON DELETE CASCADE
+)
+GO

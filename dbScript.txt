@@ -1,0 +1,14 @@
+﻿--New Table
+
+CREATE TABLE[dbo].[tblCustomer]
+(
+[cID] INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+[Name] VARCHAR (50) NOT NULL,
+[email] VARCHAR (50) NOT NULL,
+[phone] VARCHAR (13) NOT NULL,
+[uId] INT NULL,
+PRIMARY KEY CLUSTERED ([cID] ASC)
+FOREIGN KEY ([uID] REFERENCES [dbo].[tblUser]([Id])
+ON DELETE CASCADE
+);
+GO
